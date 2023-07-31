@@ -9,4 +9,12 @@ describe('analyzeArray', () => {
 			length: 6,
 		});
 	});
+
+	it('should throw an error if the array is empty', () => {
+		expect(() => analyzeArray([])).toThrow();
+	});
+
+	it('should throw an error if the array is not an array', () => {
+		expect(() => analyzeArray('not an array')).toThrow();
+	});
 });
